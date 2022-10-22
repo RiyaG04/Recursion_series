@@ -1,0 +1,16 @@
+def linear(a,n,key):
+    if n>=0:
+        if a[n]==key:
+            return n
+    else:
+        return -1
+    return linear(a,n-1,key)
+
+n=int(input())
+l=list(map(int,input().split()))
+key=int(input())
+res=linear(l,n-1,key)
+if res!=-1:
+    print(key,"is found at", res)
+else:
+    print(key,"not found")
