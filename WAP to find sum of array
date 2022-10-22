@@ -1,0 +1,12 @@
+
+def summ(a,n):
+    if n==0:
+        return 0
+    if n==1:
+        return a[0]
+    return l[n-1]+summ(a,n-1)
+
+n=int(input())
+l=list(map(int,input().split()))
+res=summ(l,n)
+print(res)
