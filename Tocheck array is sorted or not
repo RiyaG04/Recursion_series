@@ -1,14 +1,14 @@
 
+def asort(a,n):
+    if n==0 or n==1:
+        return 1
+
+    return a[n-1]>a[n-2] and asort(a,n-1)
+
 n=int(input())
 l=list(map(int,input().split()))
-flag=0
-for i in range(0,n-1):
-    if l[i]<l[i+1]:
-        continue
-    else:
-        flag=1
-        break
-if flag==1:
-    print("Array is not sorted")
-else:
+res=asort(l,n)
+if res==1:
     print("Array is sorted")
+else:
+    print("Array is not sorted")
